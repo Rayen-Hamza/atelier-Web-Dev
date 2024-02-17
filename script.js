@@ -1,14 +1,13 @@
-// Fonction pour générer un nombre aléatoire dans un intervalle donné
+
 function genererNombreAleatoire(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
   
-  // Fonction principale du jeu
   function jeuDuChiffreCache(difficulte) {
     let nombreATrouver;
     let nombreTentatives;
   
-    // Définir les paramètres en fonction de la difficulté choisie
+    
     switch (difficulte) {
       case "Facile":
         nombreATrouver = genererNombreAleatoire(1, 10);
@@ -53,7 +52,7 @@ function genererNombreAleatoire(min, max) {
       alert(`Désolé, vous avez épuisé toutes vos tentatives. Le nombre était ${nombreATrouver}.`);
     }
   
-    // Demander au joueur s'il veut rejouer
+   
     let rejouer = confirm("Voulez-vous jouer à nouveau ?");
     if (rejouer) {
       let niveau = prompt("Choisissez le niveau de difficulté (Facile, Intermédiaire, Difficile) :");
@@ -61,7 +60,7 @@ function genererNombreAleatoire(min, max) {
     }
   }
   
-  // Début du jeu : demande de niveau de difficulté
+ 
   let niveau = prompt("Choisissez le niveau de difficulté (Facile, Intermédiaire, Difficile) :");
   jeuDuChiffreCache(niveau);
   
